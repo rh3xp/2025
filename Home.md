@@ -8,7 +8,7 @@
 2. [Statistics](Stats.md)
 3. [SQL](SQL.md)
 4. [EDA And Feature Engineering And Feature Selection](EDA.md)
-5. [Machine Learning](ML/Index.md)
+5. [Machine Learning](Notes/ML/Index.md)
 6. [Deep Learning](DL.md)
 7. [NLP](NLP.md)
 8. [MLOps And Docker](Docker.md)
