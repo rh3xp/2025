@@ -1,3 +1,9 @@
-## TOC
+# Introduction To Machine Learning
 
-- [Chapter 1](chapter_1.md)
+## [Subsets of AI](ML/1_Subsets_of_AI.md)
+
+
+## Types of Machine Learning
+
+
+## Specific Use Cases
