@@ -4,7 +4,7 @@
 
 ### List of Topics
 
-1. [Python](Python.md)
+1. [Python](Notes/Python/Index.md)
 2. [Statistics](Stats.md)
 3. [SQL](SQL.md)
 4. [EDA And Feature Engineering And Feature Selection](EDA.md)
