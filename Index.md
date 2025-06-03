@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 ## Complete Data Science Roadmap
 
 ![Data Science Roadmap](img/Roadmap.png)

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Page Title
+---
+
+
 ## Lists
 
 ```python
