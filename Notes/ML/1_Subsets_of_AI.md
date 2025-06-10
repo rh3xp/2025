@@ -1,4 +1,4 @@
 ---
 layout: default
-title: Page Title
+title: Machine Learning - Subsets of AI
 ---
