@@ -9,6 +9,12 @@ title: SQL Games - SQL Island
 After the survived plane crash, you will be stuck on SQL Island for the time being. 
 By making progress in the game, you will find a way to escape from this island.
 
+> Check my completion certificate - 
+
+![Certificate](https://sql-island.cs.uni-kl.de/cert.php?id=dfea047724)
+
+#### SQL Commands Used  
+
 > Show list of all villages
 
 ```sql
@@ -182,4 +188,106 @@ SELECT village.name
 FROM village, inhabitant 
 WHERE village.villageid = inhabitant.villageid 
 AND inhabitant.name = 'Dirty Dieter';
+```
+> Find village chief name 
+
+```sql
+SELECT inhabitant.name
+FROM village, inhabitant
+ON village.villageid = inhabitant.villageid
+WHERE village.name = 'Onionville'
+AND village.chief = inhabitant.personid;
+```
+
+> Count of people in Onionville
+
+```sql
+SELECT COUNT(*) 
+FROM inhabitant, village 
+WHERE village.villageid = inhabitant.villageid 
+AND village.name = 'Onionville'
+```
+
+> Count of females in Onionville
+
+```sql
+SELECT COUNT(*) 
+FROM inhabitant, village 
+WHERE village.villageid = inhabitant.villageid 
+AND village.name = 'Onionville' 
+AND inhabitant.gender = 'f';
+```
+
+> Find name of female in Onionville
+
+```sql
+SELECT inhabitant.name 
+FROM inhabitant, village 
+WHERE village.villageid = inhabitant.villageid 
+AND village.name = 'Onionville' 
+AND inhabitant.gender = 'f';
+```
+
+> Find sum of all gold in Cucumbertown town
+
+```sql
+SELECT SUM(inhabitant.gold) 
+FROM inhabitant, village 
+WHERE village.villageid = inhabitant.villageid 
+AND village.name = 'Cucumbertown'
+```
+
+> Sum of all gold from bakers, dealers, merchants
+
+```sql
+SELECT sum(gold)
+FROM inhabitant
+WHERE job IN ('baker', 'dealer', 'merchant');
+```
+
+> Find AVG, Total gold distribution based on job
+
+```sql
+SELECT job, SUM(inhabitant.gold), AVG(inhabitant.gold) 
+FROM inhabitant 
+GROUP BY job 
+ORDER BY AVG(inhabitant.gold)
+```
+
+> Find AVG, Total gold distribution based on state
+
+```sql
+SELECT state, AVG(gold)
+FROM inhabitant
+GROUP BY state;
+```
+
+> KILL DIETER !!!
+
+```sql
+DELETE FROM inhabitant 
+WHERE name = 'Dirty Dieter';
+```
+
+>  KILL DIANE !!!
+
+```sql
+DELETE FROM INHABITANT
+WHERE name = 'Dirty Diane';
+```
+
+> Set pilot FREE !!!
+
+```sql
+UPDATE inhabitant
+SET state = 'friendly'
+WHERE job = 'pilot';
+```
+
+> I AM FREEEEEEEE !!!
+
+```sql
+UPDATE inhabitant 
+SET state = 'emigrated' 
+WHERE personid = 20;
 ```
