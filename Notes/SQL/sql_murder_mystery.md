@@ -3,7 +3,7 @@ layout: default
 title: SQL Games - SQL Murder Mystery
 ---
 
-# SQL Murder Mystery
+# [SQL Murder Mystery](https://mystery.knightlab.com/)
 
 
 ### DB SCHEMA
