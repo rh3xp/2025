@@ -101,3 +101,85 @@ UPDATE item
 SET owner = 20 
 WHERE owner IS NULL;
 ```
+> Show list of items owned by Stranger
+
+```sql
+SELECT * 
+FROM item
+WHERE owner = 20;
+```
+
+> Show list of friendly merchants & dealers
+
+```sql
+SELECT * 
+FROM inhabitant
+WHERE (job = 'dealer' OR job = 'merchant')
+AND state = 'friendly';
+```
+
+> Sell ring & teapot to personid 15 
+
+```sql
+UPDATE item
+SET owner = 15
+WHERE item IN ('ring', 'teapot');
+```
+
+> Update gold qty for Stranger post selling items
+
+```sql
+UPDATE inhabitant 
+SET gold = gold + 120 
+WHERE personid = 20;
+```
+
+> Update name from Stranger to rh3xp
+
+```sql
+UPDATE inhabitant
+SET name = 'rh3xp'
+WHERE personid = 20;
+```
+
+> Show list of all bakers rich to poor
+
+```sql
+SELECT *
+FROM inhabitant
+WHERE job = 'baker'
+ORDER BY gold desc;
+```
+
+> Earned 100 gold working for 8 hours as a baker, baking 10,000 breads
+
+```sql
+UPDATE inhabitant 
+SET gold = gold + 100 - 150;
+WHERE personid = 20;
+```
+
+> Sword acquired
+
+```sql
+INSERT INTO item (item, owner)
+VALUES ('sword', 20);
+
+```
+
+> Show list of pilots
+
+```sql
+SELECT *
+FROM inhabitant
+WHERE job = 'pilot';
+```
+
+> Find where Dirty Dieter lives
+
+```sql
+SELECT village.name 
+FROM village, inhabitant 
+WHERE village.villageid = inhabitant.villageid 
+AND inhabitant.name = 'Dirty Dieter';
+```
