@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Page Title
+title: Python
 ---
 
 
