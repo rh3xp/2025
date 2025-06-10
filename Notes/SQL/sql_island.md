@@ -9,9 +9,9 @@ title: SQL Games - SQL Island
 After the survived plane crash, you will be stuck on SQL Island for the time being. 
 By making progress in the game, you will find a way to escape from this island.
 
-> Check my completion certificate - 
+> Check my completion [certificate](https://sql-island.cs.uni-kl.de/cert.php?id=dfea047724) - 
 
-![Certificate](https://sql-island.cs.uni-kl.de/cert.php?id=dfea047724)
+![Certificate](../../img/SQL_Island_Certificate.png)
 
 #### SQL Commands Used  
 
